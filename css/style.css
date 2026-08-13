@@ -1,3 +1,24 @@
+@font-face{
+  font-family:'Wagon';
+  src:url('../fonts/Wagon-Bold.otf') format('opentype');
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:'Wagon';
+  src:url('../fonts/Wagon-ExtraLight.otf') format('opentype');
+  font-weight:200;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:'Wagon';
+  src:url('../fonts/Wagon-ExtraLightItalic.otf') format('opentype');
+  font-weight:200;
+  font-style:italic;
+  font-display:swap;
+}
 :root{
   --cream:#F7F2E7;
   --cream-2:#FFFDF8;
@@ -14,7 +35,8 @@
 *{box-sizing:border-box; margin:0; padding:0;}
 html{scroll-behavior:smooth;}
 body{
-  font-family:'Inter',sans-serif;
+  font-family:'Wagon','Inter',sans-serif;
+  font-weight:200;
   background:var(--cream);
   color:var(--ink);
   line-height:1.6;
@@ -24,15 +46,15 @@ a{color:inherit; text-decoration:none;}
 img{max-width:100%; display:block;}
 .wrap{max-width:1180px; margin:0 auto; padding:0 40px;}
 .eyebrow{
-  font-family:'Inter',sans-serif;
+  font-family:'Wagon',sans-serif;
   font-weight:600;
   letter-spacing:.14em;
   text-transform:uppercase;
   font-size:12px;
   color:var(--maroon);
 }
-h1,h2,h3{font-family:'Bodoni Moda',serif; font-weight:700; color:var(--ink); line-height:1.05; letter-spacing:-0.01em;}
-.script{font-family:'Caveat',cursive;}
+h1,h2,h3{font-family:'Wagon',serif; font-weight:700; color:var(--ink); line-height:1.05; letter-spacing:-0.01em;}
+.script{font-family:'Wagon',cursive; font-style:italic; font-weight:200;}
 
 /* ---------- NAV ---------- */
 nav{
@@ -45,7 +67,7 @@ nav{
   max-width:1180px; margin:0 auto; padding:18px 40px;
   display:flex; align-items:center; justify-content:space-between;
 }
-.nav-name{font-family:'Bodoni Moda',serif; font-weight:600; font-size:21px;}
+.nav-name{font-family:'Wagon',serif; font-weight:700; font-size:21px;}
 .nav-name span{color:var(--pink);}
 .nav-links{display:flex; align-items:center; gap:36px; font-size:14px; font-weight:600;}
 .nav-links a{position:relative; padding:4px 0;}
@@ -84,7 +106,7 @@ nav{
 }
 .hero-name .accent{color:var(--maroon); position:relative; font-style:normal; font-weight:800;}
 .hero-role{
-  font-family:'Inter',sans-serif; font-weight:600; font-size:18px; color:var(--maroon);
+  font-family:'Wagon',sans-serif; font-weight:600; font-size:18px; color:var(--maroon);
   margin-top:14px; letter-spacing:.01em;
 }
 .hero-role .sep{color:var(--sand); margin:0 8px;}
@@ -104,7 +126,7 @@ nav{
 .btn-secondary:hover{background:var(--ink); color:var(--cream-2);}
 .hero-note{
   margin-top:34px; display:flex; align-items:center; gap:10px;
-  font-family:'Caveat',cursive; font-size:22px; color:var(--maroon);
+  font-family:'Wagon',cursive; font-style:italic; font-weight:200; font-size:22px; color:var(--maroon);
 }
 .hero-note svg{flex-shrink:0;}
 
@@ -136,11 +158,11 @@ nav{
 .hero-illustration{
   position:relative; z-index:1; color:var(--cream-2);
 }
-.hero-illustration .tag-line{font-family:'Inter',sans-serif; font-size:13px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; opacity:.85;}
-.hero-illustration .tag-big{font-family:'Bodoni Moda',serif; font-size:26px; margin-top:6px;}
+.hero-illustration .tag-line{font-family:'Wagon',sans-serif; font-size:13px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; opacity:.85;}
+.hero-illustration .tag-big{font-family:'Wagon',serif; font-weight:700; font-size:26px; margin-top:6px;}
 .sticky-note{
   position:absolute; background:var(--cream-2); color:var(--ink);
-  padding:10px 14px; border-radius:8px; font-family:'Caveat',cursive; font-weight:700; font-size:19px;
+  padding:10px 14px; border-radius:8px; font-family:'Wagon',cursive; font-style:italic; font-weight:200; font-weight:700; font-size:19px;
   box-shadow:0 6px 14px rgba(0,0,0,0.14); transform:rotate(-6deg); z-index:2;
 }
 .note-1{top:-18px; left:-14px; transform:rotate(-8deg);}
@@ -152,7 +174,7 @@ nav{
   margin-top:10px;
 }
 .stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:left;}
-.stat-num{font-family:'Bodoni Moda',serif; font-size:19px; font-weight:600; color:var(--cream-2); line-height:1.25;}
+.stat-num{font-family:'Wagon',serif; font-weight:700; font-size:19px; color:var(--cream-2); line-height:1.25;}
 .stat-num span{color:#F2A9C4;}
 .stat-label{font-size:13px; color:#E7CBD6; margin-top:6px; line-height:1.4;}
 .stat-item{border-left:1px solid rgba(255,255,255,0.22); padding-left:20px;}
@@ -163,6 +185,7 @@ section{padding:96px 0;}
 .section-head{margin-bottom:48px; max-width:640px;}
 .section-head h2{font-size:clamp(30px,3.6vw,42px); margin-top:10px;}
 .section-head p{margin-top:14px; color:#4a4a50; font-size:16px;}
+.section-title{font-size:clamp(28px,3.2vw,38px); margin:0; letter-spacing:-0.01em;}
 
 /* ---------- ABOUT ---------- */
 #about{background:var(--cream-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
@@ -189,7 +212,7 @@ section{padding:96px 0;}
   background:rgba(27,26,31,0.72); color:var(--cream-2); border-radius:14px; padding:14px 16px;
   font-size:13px; backdrop-filter:blur(4px);
 }
-.avatar-badge strong{display:block; font-family:'Bodoni Moda',serif; font-size:15px; font-weight:700; margin-bottom:2px;}
+.avatar-badge strong{display:block; font-family:'Wagon',serif; font-weight:700; font-size:15px; margin-bottom:2px;}
 .about-bio p{color:#3a3a40; font-size:16px; margin-bottom:16px;}
 .about-bio p strong{color:var(--ink);}
 .checklist{margin-top:28px; display:grid; grid-template-columns:1fr 1fr; gap:14px 24px;}
@@ -205,7 +228,7 @@ section{padding:96px 0;}
 
 /* ---------- TOOLS / SKILLS ---------- */
 .tools-block{margin-top:36px; padding-top:28px; border-top:1px solid var(--line);}
-.tools-block h4{font-family:'Inter',sans-serif; font-size:12.5px; text-transform:uppercase; letter-spacing:.1em; color:#7a7a72; font-weight:600; margin-bottom:14px;}
+.tools-block h4{font-family:'Wagon',sans-serif; font-size:12.5px; text-transform:uppercase; letter-spacing:.1em; color:#7a7a72; font-weight:600; margin-bottom:14px;}
 .tools-cloud{display:flex; flex-wrap:wrap; gap:8px;}
 .tool-pill{
   font-size:13px; font-weight:600; padding:7px 14px; border-radius:100px;
@@ -229,7 +252,7 @@ section{padding:96px 0;}
 }
 .exp-item.current::before{background:var(--pink);}
 .exp-header{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 14px; margin-bottom:2px;}
-.exp-company{font-family:'Bodoni Moda',serif; font-size:19px; font-weight:700;}
+.exp-company{font-family:'Wagon',serif; font-weight:700; font-size:19px;}
 .exp-dates{font-size:12px; color:#7a7a72; font-weight:600; white-space:nowrap;}
 .exp-role{font-size:13.5px; font-weight:600; color:var(--maroon); margin-bottom:4px;}
 .exp-project{font-size:12.5px; color:#7a7a72; font-style:italic; margin-bottom:10px;}
@@ -310,7 +333,7 @@ section{padding:96px 0;}
 .cert-badge{
   width:52px; height:52px; border-radius:12px; flex-shrink:0;
   display:flex; align-items:center; justify-content:center;
-  font-family:'Bodoni Moda',serif; font-weight:600; font-size:12px; color:#fff; text-align:center; line-height:1.1;
+  font-family:'Wagon',serif; font-weight:700; font-size:12px; color:#fff; text-align:center; line-height:1.1;
 }
 .cert-badge.maroon{background:var(--maroon);}
 .cert-badge.ink{background:var(--ink);}
@@ -319,8 +342,25 @@ section{padding:96px 0;}
 .cert-sub{font-size:13px; color:#7a7a72;}
 .cert-link{font-size:12.5px; font-weight:600; color:var(--maroon); margin-top:2px; display:inline-block;}
 .quote-card{background:var(--maroon); color:var(--cream-2); display:flex; flex-direction:column; justify-content:space-between;}
-.quote-card p{font-family:'Bodoni Moda',serif; font-style:normal; font-weight:700; font-size:21px; line-height:1.42;}
+.quote-card p{font-family:'Wagon',serif; font-weight:700; font-style:normal; font-size:17px; line-height:1.5;}
 .quote-attr{margin-top:20px; font-size:13.5px; color:#E7CBD6;}
+
+/* ---------- RECOMMENDATIONS AUTO-SCROLL ---------- */
+.recs-card{overflow:hidden; position:relative;}
+.recs-scroll{
+  margin-top:16px; height:360px; overflow:hidden; position:relative;
+  -webkit-mask-image:linear-gradient(180deg, transparent 0, #000 28px, #000 calc(100% - 28px), transparent 100%);
+  mask-image:linear-gradient(180deg, transparent 0, #000 28px, #000 calc(100% - 28px), transparent 100%);
+}
+.recs-track{display:flex; flex-direction:column; gap:26px; animation:recs-marquee 32s linear infinite;}
+.recs-card:hover .recs-track{animation-play-state:paused;}
+.rec-item p{font-size:14.5px; line-height:1.55; color:var(--cream-2); margin-bottom:10px;}
+.rec-attr{font-size:12.5px; color:#E7CBD6;}
+.rec-attr a{color:var(--cream-2); font-weight:700;}
+@keyframes recs-marquee{
+  0%{transform:translateY(0);}
+  100%{transform:translateY(-50%);}
+}
 
 /* ---------- BEYOND STRIP ---------- */
 #beyond{padding:70px 0; background:var(--cream-2); border-top:1px solid var(--line);}
@@ -342,15 +382,15 @@ footer{
   background:var(--ink); color:var(--cream-2); padding:64px 0 30px; position:relative; overflow:hidden;
 }
 .footer-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.14);}
-.footer-name{font-family:'Bodoni Moda',serif; font-weight:700; font-size:26px; margin-bottom:12px;}
+.footer-name{font-family:'Wagon',serif; font-weight:700; font-size:26px; margin-bottom:12px;}
 .footer-name span{color:var(--pink);}
 .footer-tagline{color:#b9b8c0; font-size:14.5px; max-width:320px;}
 .footer-col h4{font-size:12.5px; text-transform:uppercase; letter-spacing:.1em; color:#8f8ea3; margin-bottom:16px; font-weight:600;}
 .footer-col a, .footer-col p{display:block; font-size:14.5px; color:#e6e5ee; margin-bottom:10px;}
 .footer-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:24px; font-size:13px; color:#8f8ea3; flex-wrap:wrap; gap:10px;}
 .footer-signoff{display:flex; align-items:baseline; gap:10px;}
-.signoff-quote{font-family:'Bodoni Moda',serif; font-style:normal; font-weight:700; font-size:17px; color:var(--cream-2); letter-spacing:.01em;}
-.signoff-attr{font-family:'Inter',sans-serif; font-style:normal; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--pink);}
+.signoff-quote{font-family:'Wagon',serif; font-weight:700; font-style:normal; font-size:17px; color:var(--cream-2); letter-spacing:.01em;}
+.signoff-attr{font-family:'Wagon',sans-serif; font-style:normal; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--pink);}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:900px){
