@@ -31,7 +31,7 @@ img{max-width:100%; display:block;}
   font-size:12px;
   color:var(--maroon);
 }
-h1,h2,h3{font-family:'Bodoni Moda',serif; font-weight:600; color:var(--ink); line-height:1.05; letter-spacing:-0.01em;}
+h1,h2,h3{font-family:'Bodoni Moda',serif; font-weight:700; color:var(--ink); line-height:1.05; letter-spacing:-0.01em;}
 .script{font-family:'Caveat',cursive;}
 
 /* ---------- NAV ---------- */
@@ -77,12 +77,12 @@ nav{
 .hero-eyebrow .dot{width:8px; height:8px; border-radius:50%; background:var(--pink);}
 .hero-name{
   font-size:clamp(46px,6.4vw,84px);
-  font-weight:700;
+  font-weight:800;
   letter-spacing:-0.015em;
   position:relative;
   display:inline-block;
 }
-.hero-name .accent{color:var(--pink); position:relative; font-style:italic; font-weight:600;}
+.hero-name .accent{color:var(--maroon); position:relative; font-style:normal; font-weight:800;}
 .hero-role{
   font-family:'Inter',sans-serif; font-weight:600; font-size:18px; color:var(--maroon);
   margin-top:14px; letter-spacing:.01em;
@@ -189,7 +189,7 @@ section{padding:96px 0;}
   background:rgba(27,26,31,0.72); color:var(--cream-2); border-radius:14px; padding:14px 16px;
   font-size:13px; backdrop-filter:blur(4px);
 }
-.avatar-badge strong{display:block; font-family:'Bodoni Moda',serif; font-size:15px; font-weight:600; margin-bottom:2px;}
+.avatar-badge strong{display:block; font-family:'Bodoni Moda',serif; font-size:15px; font-weight:700; margin-bottom:2px;}
 .about-bio p{color:#3a3a40; font-size:16px; margin-bottom:16px;}
 .about-bio p strong{color:var(--ink);}
 .checklist{margin-top:28px; display:grid; grid-template-columns:1fr 1fr; gap:14px 24px;}
@@ -229,7 +229,7 @@ section{padding:96px 0;}
 }
 .exp-item.current::before{background:var(--pink);}
 .exp-header{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 14px; margin-bottom:2px;}
-.exp-company{font-family:'Bodoni Moda',serif; font-size:19px; font-weight:600;}
+.exp-company{font-family:'Bodoni Moda',serif; font-size:19px; font-weight:700;}
 .exp-dates{font-size:12px; color:#7a7a72; font-weight:600; white-space:nowrap;}
 .exp-role{font-size:13.5px; font-weight:600; color:var(--maroon); margin-bottom:4px;}
 .exp-project{font-size:12.5px; color:#7a7a72; font-style:italic; margin-bottom:10px;}
@@ -319,7 +319,7 @@ section{padding:96px 0;}
 .cert-sub{font-size:13px; color:#7a7a72;}
 .cert-link{font-size:12.5px; font-weight:600; color:var(--maroon); margin-top:2px; display:inline-block;}
 .quote-card{background:var(--maroon); color:var(--cream-2); display:flex; flex-direction:column; justify-content:space-between;}
-.quote-card p{font-family:'Bodoni Moda',serif; font-style:italic; font-weight:500; font-size:21px; line-height:1.42;}
+.quote-card p{font-family:'Bodoni Moda',serif; font-style:normal; font-weight:700; font-size:21px; line-height:1.42;}
 .quote-attr{margin-top:20px; font-size:13.5px; color:#E7CBD6;}
 
 /* ---------- BEYOND STRIP ---------- */
@@ -342,15 +342,15 @@ footer{
   background:var(--ink); color:var(--cream-2); padding:64px 0 30px; position:relative; overflow:hidden;
 }
 .footer-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.14);}
-.footer-name{font-family:'Bodoni Moda',serif; font-size:26px; margin-bottom:12px;}
+.footer-name{font-family:'Bodoni Moda',serif; font-weight:700; font-size:26px; margin-bottom:12px;}
 .footer-name span{color:var(--pink);}
 .footer-tagline{color:#b9b8c0; font-size:14.5px; max-width:320px;}
 .footer-col h4{font-size:12.5px; text-transform:uppercase; letter-spacing:.1em; color:#8f8ea3; margin-bottom:16px; font-weight:600;}
 .footer-col a, .footer-col p{display:block; font-size:14.5px; color:#e6e5ee; margin-bottom:10px;}
 .footer-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:24px; font-size:13px; color:#8f8ea3; flex-wrap:wrap; gap:10px;}
-.footer-signoff{display:flex; align-items:baseline; gap:9px;}
-.signoff-quote{font-family:'Bodoni Moda',serif; font-style:italic; font-weight:500; font-size:16px; color:var(--cream-2); letter-spacing:.01em;}
-.footer-bottom .script{color:var(--pink); font-size:19px;}
+.footer-signoff{display:flex; align-items:baseline; gap:10px;}
+.signoff-quote{font-family:'Bodoni Moda',serif; font-style:normal; font-weight:700; font-size:17px; color:var(--cream-2); letter-spacing:.01em;}
+.signoff-attr{font-family:'Inter',sans-serif; font-style:normal; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--pink);}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:900px){
