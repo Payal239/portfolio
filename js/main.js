@@ -35,3 +35,52 @@
       // network/API hiccup — static fallback cards already in the DOM stay put
     });
 })();
+
+// ---------- Recommendations carousel ----------
+(function () {
+  var track = document.getElementById('recsTrack');
+  if (!track) return;
+
+  var slides = track.querySelectorAll('.rec-slide');
+  var dots = document.querySelectorAll('#recsDots .recs-dot');
+  var prevBtn = document.getElementById('recsPrev');
+  var nextBtn = document.getElementById('recsNext');
+  var count = slides.length;
+  var current = 0;
+
+  function goTo(index) {
+    current = Math.max(0, Math.min(count - 1, index));
+    track.scrollTo({ left: track.clientWidth * current, behavior: 'smooth' });
+    updateDots();
+  }
+
+  function updateDots() {
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  prevBtn.addEventListener('click', function () { goTo(current - 1); });
+  nextBtn.addEventListener('click', function () { goTo(current + 1); });
+  dots.forEach(function (dot) {
+    dot.addEventListener('click', function () {
+      goTo(parseInt(dot.getAttribute('data-index'), 10));
+    });
+  });
+
+  // Keep dots in sync when the person swipes/drags the track directly
+  var scrollTimeout;
+  track.addEventListener('scroll', function () {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(function () {
+      var index = Math.round(track.scrollLeft / track.clientWidth);
+      current = Math.max(0, Math.min(count - 1, index));
+      updateDots();
+    }, 100);
+  });
+
+  // Keep position correct on resize (slide width is 100% of container)
+  window.addEventListener('resize', function () {
+    track.scrollTo({ left: track.clientWidth * current, behavior: 'auto' });
+  });
+})();
